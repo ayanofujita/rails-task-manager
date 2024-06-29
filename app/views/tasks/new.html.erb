@@ -1,0 +1,16 @@
+<h1>New task</h1>
+
+<%= form_with model: @aya do |f| %>
+  <%= f.label :title, :class => "font-weight-bold" %>
+  <%= f.text_field :title, :class => "form-control my-2" %>
+  <%= f.label :details, :class => "font-weight-bold"  %>
+  <%= f.text_area :details, :class => "form-control my-2" %>
+  <%= f.submit 'Create Task', :class => "btn btn-primary my-2" %>
+<% end %>
+
+<hr>
+
+<p>
+  <i class="fa-solid fa-arrow-rotate-left"></i>
+  <%= link_to "Back to list", tasks_path %>
+</p>
