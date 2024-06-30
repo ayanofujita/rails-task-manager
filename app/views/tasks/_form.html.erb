@@ -1,0 +1,13 @@
+<%= form_with model: aya do |f| %>
+  <%= f.label :title, :class => "font-weight-bold" %>
+  <%= f.text_field :title, :class => "form-control my-2" %>
+  <%= f.label :details, :class => "font-weight-bold"  %>
+  <%= f.text_area :details, :class => "form-control my-2" %>
+  <% if !aya.new_record? %>
+    <div>
+      <%= f.check_box :completed %>
+      <%= f.label :completed, "Completed" %>
+    </div>
+  <% end %>
+  <%= f.submit 'Update Task', :class => "btn btn-primary my-2" %>
+<% end %>

@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-between align-items-start">
   <h1><%= @task.title %></h1>
-  <%= link_to edit_path(@task), class: "text-decoration-none text-reset" do %>
+  <%= link_to edit_task_path(@task), class: "text-decoration-none text-reset" do %>
     <button class="btn btn-light mb-2">
       <i class="fa-solid fa-pen-to-square"></i>
       Edit this task
